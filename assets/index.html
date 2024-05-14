@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Poll</title>
+    <style>
+        .poll-container {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .btn {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .results {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="poll-container">
+        <h1>Which company owns all your data?</h1>
+        <button class="btn" onclick="voteOption1()">Meta glasses</button>
+        <button class="btn" onclick="voteOption2()">Gemini glasses</button>
+
+        <div class="results">
+            <p>Meta glasses Votes: <span id="option1Votes">0</span></p>
+            <p>Gemini glasses Votes: <span id="option2Votes">0</span></p>
+        </div>
+    </div>
+
+    <script>
+        let option1Votes = 0;
+        let option2Votes = 0;
+
+        function voteOption1() {
+            option1Votes++;
+            document.getElementById('option1Votes').innerText = option1Votes;
+        }
+
+        function voteOption2() {
+            option2Votes++;
+            document.getElementById('option2Votes').innerText = option2Votes;
+        }
+    </script>
+</body>
+</html>
